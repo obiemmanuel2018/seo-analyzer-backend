@@ -15,6 +15,7 @@ from multiprocessing import Pool
 import time
 from django.conf import settings
 import os
+import json
 
 
 # def load_and_write_workbook(workbook_name, name_of_audit_sheet, result):
@@ -38,7 +39,7 @@ def analyzer(PROJECT_NAME, HOMEPAGE):
     crawl()
 
     time.sleep(6)
-    print("Auditing")
+    # print("Auditing")
 
     scrapped_data = get_scrapped_data(os.path.join(settings.PROJECT_ROOT,PROJECT_NAME,'crawled.txt'))
     duplicate_titles = scrapped_data.duplicate_titles()
@@ -56,8 +57,8 @@ def analyzer(PROJECT_NAME, HOMEPAGE):
 
     return {
         'duplicate_titles': duplicate_titles,
-        'duplicate_descriptions':duplicate_descriptions,
-        'missing_descriptions':missing_descriptions,
+        'duplicate_descriptions': duplicate_descriptions,
+        'missing_descriptions': missing_descriptions,
         'missing_titles' :  missing_titles,
         'missing_h1': missing_h1,
         'duplicate_h1':duplicate_h1,

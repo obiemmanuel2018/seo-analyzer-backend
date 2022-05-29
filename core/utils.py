@@ -1,4 +1,4 @@
-from .serializer import CustomTokenObtainPairSerializer
+from .serializers import CustomTokenObtainPairSerializer
 from .models import SignupCode
 
 def get_access_token(email,password):

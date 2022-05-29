@@ -65,7 +65,8 @@ class Spider:
             finder = LinkFinder(Spider.base_url, page_url)
             finder.feed(html_string)
         except Exception as e:
-            print('we faced this' + str(e))
+            
+            # print('we faced this' + str(e))
             return set()
         return finder.page_links()
 

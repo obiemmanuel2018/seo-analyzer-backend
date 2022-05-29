@@ -40,8 +40,6 @@ class UserManager(BaseUserManager):
           user.is_staff = True
           user.is_superuser = True
           user.is_verified = True
-          user.is_writer = True
-          user.is_editor = True
           user.save()
           return user
           
@@ -53,8 +51,6 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser,PermissionsMixin):
       name = models.CharField(max_length=200,null=True,blank=True)
       email = models.EmailField(max_length=200,unique=True)
-      is_editor = models.BooleanField(default=False)
-      is_writer = models.BooleanField(default=False)
       is_staff = models.BooleanField(default=False)
       is_active = models.BooleanField(default=True)
       is_superuser = models.BooleanField(default=False)
@@ -64,7 +60,7 @@ class User(AbstractBaseUser,PermissionsMixin):
       objects = UserManager()      
       
       def __str__(self):
-          return str(self.name)
+          return str(self.email)
 
    
 

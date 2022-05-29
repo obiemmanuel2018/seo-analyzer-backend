@@ -3,10 +3,10 @@ from multiprocessing.dummy import Pool
 
 
 def scrape_details(line):
-    print("Scraping " + line + "\n")
+    # print("Scraping " + line + "\n")
     page = scrape(line.strip())
     title = page.get_title()
-    print(line + " " + str(title))
+    # print(line + " " + str(title))
     dict_titles.update({line: title})
     meta_descriptions = page.get_meta_description()
     dict_meta_d.update({line: meta_descriptions})

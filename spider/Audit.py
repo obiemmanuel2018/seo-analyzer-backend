@@ -13,6 +13,7 @@ class get_scrapped_data:
         duplicate_title_pages = []
         flipped = {}
         dict_titles = get_scrapped_data.get_data[0]
+  
         
         for key, value in dict_titles.items():
             if value is not None:
