@@ -1,14 +1,11 @@
-from multiprocessing.reduction import duplicate
-from django.shortcuts import render
+
 from .main import analyzer as main_analyzer
-from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import status
 from .serializers import ProjectSerializer, ArticleSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import permission_classes
-from django.contrib.auth import get_user_model
 from .models import DuplicateDescription, LowTitle, MissingCanonical, MissingDescription, \
     MissingH1, MissingTitle, MissingViewPort, Project, Result, DuplicateTitle, LowMeta, CrawlingStatistic, AuditStatistic, Article
 import os
