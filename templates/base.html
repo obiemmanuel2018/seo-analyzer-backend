@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>
+        {% block 'title' %}{% endblock 'title' %}
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,700;1,800;1,900&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+           -webkit-font-smoothing: antialiased;
+           -moz-osx-font-smoothing: grayscale;
+           scroll-behavior: smooth;
+           overflow-x:hidden !important;
+  
+            }
+
+        :root{
+         --red:#D00000;
+         --pink:#E5BBBB;
+         --primary-font:'Poppins';
+         --primary-color:rgba(215, 132, 21, 0.46);
+         --secondary-color:#D78415;
+         --tertiary-color:#559463;
+             }
+       
+    
+ .form{
+    width: 50%;
+    margin: auto;
+    height: auto;
+    background: white;
+    margin-top: 4rem;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    position: relative;
+   
+
+}
+
+.form .errors{
+        display: none;
+    }
+
+.form .error{
+        font: normal 500 14px var(--primary-font) !important;
+        text-transform: capitalize;
+        color:var(--red) !important;
+        margin-top: .5rem;
+
+    }
+.form span{
+        font: normal 500 16px var(--primary-font);
+        color: green;
+    }
+ .form h6{
+    font: normal 600 22px var(--primary-font);
+    text-transform: capitalize;
+}
+
+ .form p{
+    font: normal 500 16px var(--primary-font);
+    opacity: .7;
+}
+
+ .form .input{
+    padding: .2rem 0rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid whitesmoke;
+}
+
+ .form .input .icon i{
+    font-size: 18px;
+}
+ .form .input label{
+    display: block;
+    font: normal 600 14px var(--primary-font);
+    
+}
+
+ .form .input input{
+    border: none !important;
+    font: normal 14px var(--primary-font);
+    width: 80%;
+    margin-bottom: .4rem;
+}
+ .form .input input:focus{
+    outline: none !important;
+}
+ .form .button{
+    position: relative !important;
+    height: 60px;
+    padding:0rem;
+}
+
+ .form .button button{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    font: normal 500 14px var(--primary-font);
+    text-transform: capitalize;
+    cursor: pointer;
+    background: var(--secondary-color);
+    border:1px solid var(--secondary-color);
+    color: white;
+   
+}
+
+ .form .line{
+    position: absolute;
+    bottom: 1%;
+    width: 30%;
+    height: 6px;
+    border-radius: 20px;
+    background: gray;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+@media (min-width:768px) and (max-width:1023px){
+     
+       .form{
+          width: 80%;
+          margin-top: 7rem;
+      }
+      
+    
+  }
+  
+  @media screen and (max-width:479px){
+    
+       .form{
+          width: 100%;
+          padding:1.5rem;
+          box-shadow: none !important;
+          margin-top: 8rem;
+      }
+   
+  }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+      {% block 'content' %}
+
+      {% endblock 'content' %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+
+{% block 'content' %}
+<form action="" class="form shadow">
+    <h6>Account Verified!</h6>
+    <p>
+        Your account has been verified successfuly !
+    </p>
+</form>
+
+{% endblock 'content' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Verified</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,700;1,800;1,900&display=swap');
+      body {
+          margin: 0;
+          font-family: 'Poppins', sans-serif;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         scroll-behavior: smooth;
+         overflow-x:hidden !important;
+
+          }
+
+    
+  
+.form{
+ width: 100%;
+  margin: auto;
+  height: auto;
+  background: white;
+  margin-top: 4rem;
+  border-radius: 20px;
+  position: relative;
+  padding-top: 0rem !important;
+ 
+
+}
+
+
+
+.form h6{
+  font: normal 600 18px 'Poppins';
+  text-transform: capitalize;
+}
+
+.form p{
+  font: normal 500 12px 'Poppins';
+  opacity: .7;
+}
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="form shadow">
+   
+        
+       
+        {% if sucess %}
+        <h6>Email Changed!</h6>
+        <p>
+        {sucess}
+        </p>
+        {%else%}
+        <h6>Error Changing Email!</h6>
+        <p>
+        {detaiil}
+    </p>
+        {% endif %}
+      
+    </div>
+</body>
+</html>
+
+
+
+

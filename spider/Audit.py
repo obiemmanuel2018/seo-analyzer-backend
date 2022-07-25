@@ -69,7 +69,7 @@ class get_scrapped_data:
             if value is not None:
                 if len(value) <= 10:
                     low_titles.append(key)
-                    print(value)
+                   
         return low_titles
 
     @staticmethod
@@ -98,7 +98,6 @@ class get_scrapped_data:
     def get_missing_h1():
         missing_h1 = []
         dict_missing = get_scrapped_data.get_data[2]
-        print(dict_missing)
         for key, value in dict_missing.items():
             if len(value) == 0:
                 missing_h1.append(key)
@@ -122,7 +121,7 @@ class get_scrapped_data:
                 duplicate_h1.append(value)
             else:
                 pass
-        print(duplicate_h1)
+       
         return duplicate_h1
 
     @staticmethod

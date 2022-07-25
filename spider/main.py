@@ -66,7 +66,7 @@ def analyzer(PROJECT_NAME, HOMEPAGE):
         'wrong_canonicals': wrong_canonicals,
         'missing_viewports': missing_viewports,
         'low_titles':low_titles,
-        'low_meta':low_meta
+        'low_metas':low_meta
     }
 
 
