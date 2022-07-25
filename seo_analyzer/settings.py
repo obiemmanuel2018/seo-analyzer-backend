@@ -27,7 +27,7 @@ DEBUG = False
 
 
 SITE_URL = "https://web-crawler-fet.herokuapp.com"
-ALLOWED_HOSTS = ['https://web-crawler-fet.herokuapp.com']
+ALLOWED_HOSTS = ['web-crawler-fet.herokuapp.com']
 
 
 # Application definition
