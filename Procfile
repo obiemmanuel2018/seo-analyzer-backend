@@ -1,1 +1,1 @@
-web: gunicorn home.wsgi --log-file -
+web: gunicorn seo_analyzer.wsgi --log-file -
